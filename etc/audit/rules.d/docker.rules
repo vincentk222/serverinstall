@@ -9,5 +9,3 @@
 -w /usr/bin/containerd-shim-runc-v1 -k containerd
 -w /usr/bin/containerd-shim-runc-v2 -k containerd
 -w /usr/bin/runc -k containerd
-
-
