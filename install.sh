@@ -58,3 +58,6 @@ fi
 # Install webmin
 curl -o setup-repos.sh https://raw.githubusercontent.com/webmin/webmin/master/setup-repos.sh
 sudo sh setup-repos.sh
+
+
+curl -fsSL https://tailscale.com/install.sh | sh
