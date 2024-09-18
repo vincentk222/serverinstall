@@ -51,12 +51,5 @@ else
 fi
 
 # Install webmin
-echo "deb https://download.webmin.com/download/repository sarge contrib" | sudo tee /etc/apt/sources.list.d/webmin.list > /dev/null
-wget -q http://www.webmin.com/jcameron-key.asc -O- | sudo apt-key add -
-sudo apt-get update
-sudo apt-get install -y webmin
-
-# Download Docker Bench for Security
-sudo git clone https://github.com/docker/docker-bench-security.git
-cd docker-bench-security
-sudo bash docker-bench-security.sh
+curl -o setup-repos.sh https://raw.githubusercontent.com/webmin/webmin/master/setup-repos.sh
+sh setup-repos.sh
