@@ -13,6 +13,11 @@ sudo apt-get dist-upgrade -y
 sudo apt-get install -y apt-transport-https ca-certificates curl gnupg lsb-release
 
 # Add Docker's official GPG key
+# Vérifier si le fichier existe
+if [ -f /usr/share/keyrings/docker-archive-keyring.gpg ]; then
+    # Supprimer le fichier existant
+    sudo rm /usr/share/keyrings/docker-archive-keyring.gpg
+fi
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
 # Add the Docker repository to APT sources
